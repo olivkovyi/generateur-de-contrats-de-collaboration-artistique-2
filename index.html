@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Contrats de Collaboration Artistique | Votre Projet en Quelques Clics</title>
+    <meta name="description" content="Créez des contrats clairs et équitables pour les collaborations entre artistes, musiciens, écrivains, etc.">
+    <style>
+        :root {
+            --sand-light: #f5f5f5;
+            --sand-medium: #e0e0e0;
+            --sand-dark: #b0b0b0;
+            --glass-bg: rgba(255, 255, 255, 0.4);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-color: #333;
+            --accent-color: #7a869a; /* Softer, professional blue-grey */
+            --font-display: 'Georgia', serif;
+            --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--sand-light);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+            width: 100%;
+        }
+
+        header {
+            width: 100%;
+            background-color: var(--sand-medium);
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 1px solid var(--sand-dark);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        header h1 {
+            font-family: var(--font-display);
+            font-size: 3.5em;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: var(--text-color);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .editorial-rail {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding: 40px 0;
+        }
+
+        .card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.02);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            opacity: 0.3;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover::before {
+            opacity: 0.5;
+        }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: 2em;
+            color: var(--accent-color);
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: grid;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: var(--text-color);
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea,
+        select {
+            width: calc(100% - 20px);
+            padding: 12px;
+            border: 1px solid var(--sand-dark);
+            border-radius: 8px;
+            background-color: var(--sand-light);
+            font-family: var(--font-body);
+            font-size: 1em;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(122, 134, 154, 0.2);
+            outline: none;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        button {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #6a768c;
+            transform: translateY(-2px);
+        }
+
+        .result-section {
+            margin-top: 30px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .result-section h3 {
+            font-family: var(--font-display);
+            font-size: 1.8em;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        .result-contract p {
+            background-color: var(--sand-medium);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid var(--sand-dark);
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 0.95em;
+            color: var(--text-color);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .cta-buttons button {
+            flex-grow: 1;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .feature-item {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 25px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+            text-align: center;
+        }
+
+        .feature-item h3 {
+            font-family: var(--font-display);
+            color: var(--accent-color);
+            font-size: 1.4em;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        .feature-item p {
+            font-size: 0.95em;
+            color: var(--text-color);
+        }
+
+        .separator {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--sand-dark), transparent);
+            margin: 60px 0;
+        }
+
+        footer {
+            width: 100%;
+            background-color: var(--sand-dark);
+            color: var(--sand-light);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9em;
+            margin-top: 60px;
+        }
+
+        footer a {
+            color: var(--sand-light);
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--accent-color);
+        }
+
+        .seo-text {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: var(--sand-medium);
+            border-radius: 12px;
+            font-size: 0.9em;
+            color: var(--text-color);
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .seo-text h3 {
+            font-family: var(--font-display);
+            color: var(--accent-color);
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .seo-text ul {
+            list-style: disc;
+            padding-left: 20px;
+            margin-top: 15px;
+        }
+
+        .seo-text li {
+            margin-bottom: 8px;
+        }
+    </style>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://generateur-de-contrats-de-collaboration-artistique-2.onrender.com">
+    <meta property="og:title" content="Générateur de Contrats de Collaboration Artistique">
+    <meta property="og:description" content="Créez des contrats clairs et équitables pour les collaborations entre artistes, musiciens, écrivains, etc.">
+    <meta property="og:url" content="https://generateur-de-contrats-de-collaboration-artistique-2.onrender.com">
+    <meta property="og:type" content="website">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Générateur de Contrats de Collaboration Artistique", "description": "Créez des contrats clairs et équitables pour les collaborations entre artistes, musiciens, écrivains, etc.", "url": "https://generateur-de-contrats-de-collaboration-artistique-2.onrender.com", "applicationCategory": "UtilityApplication", "operatingSystem": "Web Browser"}</script>
+</head>
+<body data-site-slug="generateur-de-contrats-de-collaboration-artistique-2" data-runtime-mode="document_generator">
+    <header>
+        <div class="container">
+            <h1>Générateur de Contrats de Collaboration Artistique</h1>
+            <p>Créez des contrats clairs et équitables pour vos projets créatifs. Simplifiez les aspects juridiques et concentrez-vous sur votre art.</p>
+        </div>
+    </header>
+
+    <main class="container editorial-rail">
+        <section class="card">
+            <h2>Votre Projet en Quelques Clics</h2>
+            <p>Remplissez les informations ci-dessous pour générer instantanément un modèle de contrat adapté à votre collaboration artistique.</p>
+            <form id="tool-form">
+                <label for="project-title">Titre du Projet :</label>
+                <input type="text" id="project-title" name="project-title" placeholder="Ex: Composition musicale pour film, Co-écriture de roman..." required>
+
+                <label for="parties-involved">Parties Impliquées (Noms ou Entités, séparés par une virgule) :</label>
+                <input type="text" id="parties-involved" name="parties-involved" placeholder="Ex: Jean Dupont, Marie Curie Prod." required>
+
+                <label for="project-scope">Description Détaillée du Projet et des Rôles :</label>
+                <textarea id="project-scope" name="project-scope" placeholder="Décrivez les contributions de chaque partie, les livrables attendus, les délais clés..." required></textarea>
+
+                <label for="compensation-details">Rémunération et Partage des Revenus :</label>
+                <textarea id="compensation-details" name="compensation-details" placeholder="Précisez le mode de rémunération (forfait, pourcentage, royalties), les échéances de paiement, etc."></textarea>
+
+                <label for="intellectual-property">Propriété Intellectuelle (Attribution des droits) :</label>
+                <textarea id="intellectual-property" name="intellectual-property" placeholder="Indiquez qui détient quels droits sur l'œuvre finale, les licences d'utilisation, etc."></textarea>
+
+                <label for="dispute-resolution">Clauses de Résolution des Litiges :</label>
+                <select id="dispute-resolution" name="dispute-resolution">
+                    <option value="médiation">Médiation</option>
+                    <option value="arbitrage">Arbitrage</option>
+                    <option value="tribunal">Tribunal compétent (préciser la juridiction)</option>
+                    <option value="aucune">À définir ultérieurement</option>
+                </select>
+
+                <label for="contract-date">Date du Contrat :</label>
+                <input type="date" id="contract-date" name="contract-date" value="" required>
+
+                <button type="submit" id="tool-submit">Générer le Contrat</button>
+            </form>
+        </section>
+
+        <section id="tool-result" class="result-section" style="display: none;">
+            <h3 id="result-headline">Votre Contrat Pré-rempli</h3>
+            <div class="result-contract"></div>
+            <div class="cta-buttons">
+                <button data-affiliate-slot="download-pdf">Télécharger en PDF</button>
+                <button data-affiliate-slot="edit-online">Modifier en Ligne</button>
+                <button data-affiliate-slot="legal-review">Conseil Juridique</button>
+            </div>
+        </section>
+
+        <div class="separator"></div>
+
+        <section class="card">
+            <h2>Pourquoi Choisir Notre Générateur ?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>Simplicité</h3>
+                    <p>Fini la complexité juridique. Nos modèles sont clairs, concis et faciles à comprendre pour tous les acteurs créatifs.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Équité</h3>
+                    <p>Nous promouvons des collaborations justes. Chaque clause est pensée pour protéger les intérêts de toutes les parties.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Adaptabilité</h3>
+                    <p>Que vous soyez musicien, écrivain, développeur de jeux ou artiste visuel, nos contrats s'adaptent à vos besoins spécifiques.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Sécurité</h3>
+                    <p>Assurez une base solide pour vos projets. Des contrats bien établis réduisent les risques de litiges futurs.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="separator"></div>
+
+        <section class="card">
+            <h2>Ils nous font confiance</h2>
+            <p style="text-align: center; font-style: italic; color: var(--accent-color);">
+                "Ce générateur a transformé la manière dont je gère mes collaborations. Un gain de temps inestimable et une tranquillité d'esprit garantie." - Sophie, Artiste plasticienne
+            </p>
+            <p style="text-align: center; font-style: italic; color: var(--accent-color);">
+                "Enfin un outil qui parle aux créateurs ! Plus besoin de déchiffrer des textes légaux incompréhensibles." - Marc, Musicien indépendant
+            </p>
+        </section>
+    </main>
+
+    <div class="seo-text">
+        <h3>Optimisez vos Collaborations Créatives avec nos Contrats Personnalisables</h3>
+        <p>Dans l'écosystème dynamique de la création artistique en France, la formalisation des partenariats est essentielle. Que vous soyez un artiste indépendant, un musicien compositeur, un scénariste en herbe, un développeur de jeux vidéo ou un photographe, un contrat de collaboration bien rédigé est votre meilleur allié. Notre générateur en ligne vous offre une solution rapide et fiable pour établir des accords clairs et juridiquement sains.</p>
+        <p><strong>Pourquoi utiliser un générateur de contrat artistique ?</strong></p>
+        <ul>
+            <li><strong>Clarté des Rôles :</strong> Définissez précisément les responsabilités et les attentes de chaque partie.</li>
+            <li><strong>Protection de la Propriété Intellectuelle :</strong> Assurez la bonne attribution des droits d'auteur et des licences d'exploitation pour vos œuvres (musique, texte, images, code).</li>
+            <li><strong>Gestion des Rémunérations :</strong> Cadrez les modalités financières, qu'il s'agisse de droits d'auteur, de pourcentages sur les ventes, de rétributions forfaitaires ou de royalties.</li>
+            <li><strong>Prévention des Litiges :</strong> Un contrat solide est le meilleur moyen d'éviter les malentendus et les conflits coûteux. Nos clauses de résolution des litiges vous guident vers une entente mutuelle.</li>
+            <li><strong>Gain de Temps et d'Argent :</strong> Évitez les frais d'avocats pour des contrats standards grâce à nos modèles pré-remplis et personnalisables.</li>
+        </ul>
+        <p>Notre plateforme est conçue pour les professionnels de la culture en France, respectant les spécificités du droit français. Simplifiez la création de vos documents légaux pour artistes, musiciens, écrivains et plus encore. Obtenez un modèle de contrat de prestation artistique, de cession de droits, ou de partenariat créatif adapté à votre projet. Utilisez notre outil pour un contrat de collaboration musicale, un accord de co-écriture, un contrat pour influenceurs, ou tout autre besoin en formalisation de projet créatif.</p>
+        <p><strong>Commencez dès aujourd'hui à sécuriser vos collaborations et à propulser vos projets artistiques avec confiance !</strong></p>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Générateur de Contrats Artistiques. Tous droits réservés.</p>
+            <nav>
+                <a href="#">Conditions Générales</a> |
+                <a href="#">Politique de Confidentialité</a> |
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('tool-form');
+            const submitButton = document.getElementById('tool-submit');
+            const resultSection = document.getElementById('tool-result');
+            const resultContractDiv = resultSection.querySelector('.result-contract');
+            const contractDateInput = document.getElementById('contract-date');
+
+            // Set today's date as default
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const day = String(today.getDate()).padStart(2, '0');
+            contractDateInput.value = `${year}-${month}-${day}`;
+
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+
+                const projectTitle = document.getElementById('project-title').value.trim();
+                const partiesInvolved = document.getElementById('parties-involved').value.split(',').map(p => p.trim()).filter(p => p);
+                const projectScope = document.getElementById('project-scope').value.trim();
+                const compensationDetails = document.getElementById('compensation-details').value.trim();
+                const intellectualProperty = document.getElementById('intellectual-property').value.trim();
+                const disputeResolution = document.getElementById('dispute-resolution').value;
+                const contractDate = document.getElementById('contract-date').value;
+
+                if (!projectTitle || partiesInvolved.length === 0 || !projectScope || !contractDate) {
+                    alert("Veuillez remplir tous les champs obligatoires marqués.");
+                    return;
+                }
+
+                let partiesList = partiesInvolved.map(p => `- ${p}`).join('\n');
+
+                let contractText = `
+CONTRAT DE COLLABORATION ARTISTIQUE
+
+Entre les soussignés :
+${partiesList}
+(Ci-après collectivement désignés les "Parties" et individuellement la "Partie")
+
+Date du Contrat : Le ${new Date(contractDate).toLocaleDateString('fr-FR')}
+
+Article 1 - Objet du Contrat et Titre du Projet
+Le présent contrat a pour objet d'encadrer la collaboration entre les Parties pour le projet intitulé : "${projectTitle}".
+
+Article 2 - Description et Portée du Projet
+Le projet consiste en :
+${projectScope}
+
+Article 3 - Rémunération et Partage des Revenus
+Les modalités de rémunération et/ou de partage des revenus sont les suivantes :
+${compensationDetails || 'À définir par avenant si le projet évolue vers une monétisation.'}
+
+Article 4 - Propriété Intellectuelle
+La propriété intellectuelle et l'attribution des droits relatifs à l'œuvre résultant de cette collaboration sont définies comme suit :
+${intellectualProperty || 'Les Parties conviennent de détenir conjointement les droits sur les éléments issus de leur collaboration, sauf accord contraire écrit. Toute exploitation commerciale nécessitera l\'accord de toutes les Parties.'}
+
+Article 5 - Résolution des Litiges
+En cas de désaccord ou de litige relatif à l'interprétation ou à l'exécution du présent contrat, les Parties s'engagent à privilégier une solution amiable. Si un accord n'est pas trouvé, la résolution des litiges s'effectuera par : ${disputeResolution === 'médiation' ? 'Médiation' : disputeResolution === 'arbitrage' ? 'Arbitrage' : disputeResolution === 'tribunal' ? 'Sera porté devant le tribunal compétent de la juridiction applicable.' : 'À définir ultérieurement.'}.
+
+Article 6 - Confidentialité
+Les Parties s'engagent à maintenir la confidentialité des informations échangées dans le cadre de ce projet.
+
+Article 7 - Durée du Contrat
+Le présent contrat prend effet à la date de sa signature et se poursuivra jusqu'à l'achèvement du projet ou selon les termes spécifiques convenus entre les Parties.
+
+Fait à __________, le ${new Date(contractDate).toLocaleDateString('fr-FR')} en deux exemplaires originaux.
+
+_________________________                 _________________________
+[Nom/Signature Partie 1]                  [Nom/Signature Partie 2]
+(Si plus de parties, ajouter des lignes)
+`;
+
+                resultContractDiv.innerHTML = `<p>${contractText}</p>`;
+                resultSection.style.display = 'block';
+                resultSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+<div id="qa-smoke-result" hidden></div>
+<script id="farmbuilder-affiliate-helper">
+(function () {
+  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};
+  document.addEventListener("click", function (event) {
+    const target = event.target.closest("[data-affiliate-slot]");
+    if (!target) return;
+    const slot = target.getAttribute("data-affiliate-slot");
+    const href = window.__UTILITY_AFFILIATE_MAP[slot];
+    if (!href) return;
+    if (target.tagName && target.tagName.toLowerCase() === "a") {
+      target.setAttribute("href", href);
+      target.setAttribute("rel", "nofollow sponsored noopener noreferrer");
+      return;
+    }
+    event.preventDefault();
+    window.open(href, "_blank", "noopener");
+  }, true);
+})();
+</script>
+<script id="farmbuilder-functional-qa">
+(function () {
+  function marker() {
+    let node = document.getElementById("qa-smoke-result");
+    if (node) return node;
+    node = document.createElement("div");
+    node.id = "qa-smoke-result";
+    node.hidden = true;
+    document.body.appendChild(node);
+    return node;
+  }
+
+  function normalize(text) {
+    return String(text || "").replace(/\s+/g, " ").trim();
+  }
+
+  function findForm() {
+    return document.getElementById("tool-form") || document.querySelector("form");
+  }
+
+  function findResult() {
+    return (
+      document.getElementById("tool-result") ||
+      document.querySelector("[data-result]") ||
+      document.querySelector(".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis")
+    );
+  }
+
+  function resultSignature(node) {
+    if (!node) return "";
+    const text = normalize(node.textContent);
+    const html = normalize(node.innerHTML).slice(0, 600);
+    return `${text}||${html}`;
+  }
+
+  function resultHeadline(node) {
+    if (!node) return "";
+    const heading = node.querySelector("h1, h2, h3, strong, b");
+    return normalize(heading ? heading.textContent : "");
+  }
+
+  function sampleText(field) {
+    const key = `${field.id || ""} ${field.name || ""} ${field.placeholder || ""}`.toLowerCase();
+    if (/email/.test(key)) return "bonjour@example.com";
+    if (/url|site|website|lien/.test(key)) return "https://example.com/offre-solaire";
+    if (/phone|tel|mobile/.test(key)) return "0612345678";
+    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return "Paris";
+    if (/orientation/.test(key)) return "sud";
+    if (/keyword|theme|topic|sujet|subject/.test(key)) return "energie solaire domestique";
+    if (/titre|title/.test(key)) return "Simulateur solaire maison";
+    if (/nom|name|project/.test(key)) return "Projet Horizon";
+    if (/description|notes|content|message/.test(key)) return "Maison individuelle exposee sud avec toiture exploitable.";
+    return field.placeholder || "France";
+  }
+
+  function sampleNumber(field) {
+    const key = `${field.id || ""} ${field.name || ""}`.toLowerCase();
+    if (/inclinaison|angle|slope/.test(key)) return "30";
+    if (/surface|size|m2|sqm/.test(key)) return "28";
+    if (/annee|year/.test(key)) return "2024";
+    if (/prix|price|budget|cost|amount|montant/.test(key)) return "12000";
+    const min = Number(field.min || "");
+    const max = Number(field.max || "");
+    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {
+      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));
+    }
+    if (Number.isFinite(min)) return String(Math.max(min, 12));
+    if (Number.isFinite(max)) return String(Math.min(max, 12));
+    return field.value || "12";
+  }
+
+  function applySample(field) {
+    const tag = (field.tagName || "").toLowerCase();
+    const type = (field.type || "").toLowerCase();
+    if (field.disabled) return;
+    if (tag === "select") {
+      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];
+      if (option) field.value = option.value;
+      return;
+    }
+    if (type === "checkbox") {
+      field.checked = true;
+      return;
+    }
+    if (type === "radio") {
+      field.checked = true;
+      return;
+    }
+    if (type === "date") {
+      field.value = "2026-03-01";
+      return;
+    }
+    if (type === "email") {
+      field.value = "bonjour@example.com";
+      return;
+    }
+    if (type === "url") {
+      field.value = "https://example.com/offre-solaire";
+      return;
+    }
+    if (type === "tel") {
+      field.value = "0612345678";
+      return;
+    }
+    if (type === "color") {
+      field.value = "#2f855a";
+      return;
+    }
+    if (type === "number" || type === "range") {
+      field.value = sampleNumber(field);
+      return;
+    }
+    field.value = sampleText(field);
+  }
+
+  function stamp(status, detail, headline, primary) {
+    const node = marker();
+    node.dataset.status = status;
+    node.dataset.mode = "native-form";
+    node.dataset.detail = detail || "";
+    node.dataset.headline = headline || "";
+    node.dataset.primary = primary || "";
+    node.dataset.viewport = window.innerWidth <= 640 ? "mobile" : "desktop";
+  }
+
+  function inspectResult(before, attemptsLeft) {
+    const result = findResult();
+    if (!result) {
+      stamp("fail", "La zone de resultat est introuvable.", "");
+      return;
+    }
+    const after = resultSignature(result);
+    const text = normalize(result.textContent);
+    if (after && after !== before && text.length >= 24) {
+      const primary = result.querySelector("a[href], button[data-href], [data-primary-url]") || document.querySelector("#tool-result a[href]");
+      stamp("pass", "Le formulaire natif a mis a jour la zone de resultat.", resultHeadline(result), primary ? (primary.getAttribute("href") || primary.getAttribute("data-primary-url") || "") : "");
+      return;
+    }
+    if (attemptsLeft > 0) {
+      window.setTimeout(function () {
+        inspectResult(before, attemptsLeft - 1);
+      }, 250);
+      return;
+    }
+    stamp("fail", "La zone de resultat n'a pas renvoye de contenu exploitable.", resultHeadline(result));
+  }
+
+  function runSmoke() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("__qa") !== "functional") return;
+    const form = findForm();
+    if (!form) {
+      stamp("fail", "Le formulaire principal est introuvable.", "");
+      return;
+    }
+    const result = findResult();
+    const before = resultSignature(result);
+    form.querySelectorAll("input, select, textarea").forEach(applySample);
+    const blocker = function (event) {
+      event.preventDefault();
+    };
+    form.addEventListener("submit", blocker, { capture: true, once: true });
+    form.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
+    inspectResult(before, 6);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      window.setTimeout(runSmoke, 60);
+    }, { once: true });
+  } else {
+    window.setTimeout(runSmoke, 60);
+  }
+})();
+</script>
+</body>
+</html>
