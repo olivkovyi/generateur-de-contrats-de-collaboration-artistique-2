@@ -1,22 +1,44 @@
 {
-  "run_id": "run-1775080471956",
-  "job_index": 2,
+  "run_id": "run-1778636366098",
+  "job_index": 1,
   "params": {
     "owner_user_id": "user-1774822953462",
     "owner_username": "admin",
     "owner_display_name": "Administrator",
-    "count": 3,
+    "count": 1,
     "archetype": "generator",
-    "market": "France",
+    "market": "Growth republish",
     "language": "fr",
     "country": "FR",
-    "brief": "Un assistant de génération de contrats personnalisables pour les projets créatifs collaboratifs, couvrant la…",
-    "notes": "Créez des contrats clairs et équitables pour les collaborations entre artistes, musiciens, écrivains, etc.\nCible les artistes indépendants, musiciens, scénaristes, développeurs de jeux. Simplifie la création de documents juridiques complexes. Thème 'Sandline' pour un aspect sérieux et professionnel. Structure 'Editorial Rail' pour une présentation claire et narrative.",
-    "import_notes": "",
+    "brief": "Créez des contrats clairs et équitables pour les collaborations entre artistes, musiciens, écrivains, etc.",
+    "notes": "Growth module republish of an updated local artifact.",
+    "import_notes": "Growth module republish of an updated local artifact.",
+    "growth_job_id": "growth-1778636287649",
+    "growth_slug": "generateur-de-contrats-de-collaboration-artistique-2",
+    "growth_kind": "content",
+    "dashboard_mode": "builder",
+    "network_site_format": "forum",
+    "network_primary_topic": "",
+    "network_primary_geo": "",
+    "network_domain_pool": "forum-de-jeu.shop",
+    "network_hosting_pool": "4vps:netoper | server_id=447345 | ip=5.253.59.18 | ssh_user=root | ssh_port=22",
+    "network_dns_strategy": "auto_pool_assign",
+    "network_domain_flow": "manual",
+    "network_content_strategy": "",
+    "network_model_concept": "google/gemini-2.5-flash-lite:nitro",
+    "network_model_seo": "google/gemini-2.5-flash-lite:nitro",
+    "network_model_build": "google/gemini-2.5-flash",
+    "network_model_qa": "anthropic/claude-haiku-4.5",
+    "network_model_growth": "google/gemini-2.5-flash-lite:nitro",
+    "network_blueprint_id": "",
     "mode": "production",
-    "run_kind": "generated_batch",
+    "run_kind": "import_deploy",
     "publish_target": "render",
     "requested_publish_target": "render",
+    "railway_project_id_override": "",
+    "railway_environment_id_override": "",
+    "railway_service_id_override": "srv-d76p9rkhg0os73aba86g",
+    "railway_service_name_override": "generateur-de-contrats-de-collaboration-artistique-2",
     "github_repo_private": true,
     "stage_models": {
       "ideation": "google/gemini-2.5-flash-lite:nitro",
@@ -25,242 +47,33 @@
       "qa": "anthropic/claude-haiku-4.5",
       "escalation": "anthropic/claude-sonnet-4.6"
     },
-    "archetype_display": "mixed batch",
+    "archetype_display": "file deploy",
     "archetype_mix": [
-      "tool",
-      "generator",
-      "calculator"
+      "imported"
     ],
-    "forced_design_theme": "sandline",
-    "forced_structure_preset": "editorial-rail",
+    "forced_slug": "generateur-de-contrats-de-collaboration-artistique-2",
     "site_idea_title": "Générateur de Contrats de Collaboration Artistique",
-    "site_idea_summary": "Créez des contrats clairs et équitables pour les collaborations entre artistes, musiciens, écrivains, etc."
+    "site_idea_summary": "Créez des contrats clairs et équitables pour les collaborations entre artistes, musiciens, écrivains, etc.",
+    "import_source_path": "/var/lib/utility-site-studio/data/growth-republish/growth-1778636287649/generateur-de-contrats-de-collaboration-artistique-2",
+    "import_root_path": "/var/lib/utility-site-studio/data/growth-republish/growth-1778636287649/generateur-de-contrats-de-collaboration-artistique-2",
+    "import_analysis_model": "preserved-analysis"
   },
-  "site_spec": {
-    "slug": "generateur-de-contrats-de-collaboration-artistique-2",
-    "theme": {
-      "name": "Sandline",
-      "slug": "sandline",
-      "eyebrow": "Conversion Layer",
-      "family": "minimal-seriffed",
-      "moods": [
-        "clean",
-        "editorial",
-        "calm",
-        "luxury"
-      ],
-      "archetypes": [
-        "calculator",
-        "generator",
-        "tool"
-      ],
-      "niches": [
-        "legal",
-        "documents",
-        "premium services",
-        "planning",
-        "home"
-      ],
-      "keywords": [
-        "clarity",
-        "elegant",
-        "serif",
-        "professional"
-      ],
-      "token_index": [
-        "calculator",
-        "calm",
-        "clarity",
-        "clean",
-        "conversion",
-        "documents",
-        "editorial",
-        "elegant",
-        "generator",
-        "home",
-        "layer",
-        "legal",
-        "luxury",
-        "minimal",
-        "planning",
-        "premium",
-        "professional",
-        "sandline",
-        "serif",
-        "seriffed",
-        "services",
-        "tool"
-      ],
-      "font_embed": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap",
-      "display_font": "\"Cormorant Garamond\", serif",
-      "body_font": "\"Inter\", sans-serif",
-      "layout": "editorial",
-      "card_style": "outline",
-      "button_style": "outline",
-      "decor_style": "paper",
-      "hero_template": "1fr",
-      "seo_template": "1fr",
-      "feature_columns": 2,
-      "faq_columns": 2,
-      "hero_min_height": "auto",
-      "panel_radius": "30px",
-      "card_radius": "24px",
-      "chip_radius": "999px",
-      "button_radius": "18px",
-      "outline_width": "1px",
-      "backdrop_blur": "0px",
-      "palette": {
-        "bg": "#f5efe4",
-        "surface": "rgba(255, 255, 255, 0.84)",
-        "surface_border": "rgba(28, 23, 18, 0.1)",
-        "text": "#141312",
-        "muted": "#5c564e",
-        "accent": "#0ea5a4",
-        "accent_alt": "#f97316",
-        "hero_glow": "rgba(14, 165, 164, 0.14)",
-        "button_text": "#ffffff",
-        "panel_alt": "rgba(20, 19, 18, 0.03)",
-        "shadow": "0 26px 66px rgba(71, 58, 39, 0.12)",
-        "input_fill": "rgba(20, 19, 18, 0.04)"
-      }
-    },
-    "structure": {
-      "name": "Editorial Rail",
-      "slug": "editorial-rail",
-      "hero_variant": "editorial",
-      "proof_variant": "rail",
-      "section_order": [
-        "seo",
-        "features",
-        "proof",
-        "faq"
-      ],
-      "feature_columns": 2,
-      "faq_columns": 2,
-      "family": "editorial",
-      "moods": [
-        "calm",
-        "trust",
-        "luxury"
-      ],
-      "archetypes": [
-        "calculator",
-        "generator",
-        "tool"
-      ],
-      "niches": [
-        "property",
-        "documents",
-        "consulting",
-        "insurance"
-      ],
-      "keywords": [
-        "editorial",
-        "rail",
-        "storytelling",
-        "magazine"
-      ],
-      "token_index": [
-        "calculator",
-        "calm",
-        "consulting",
-        "documents",
-        "editorial",
-        "faq",
-        "features",
-        "generator",
-        "insurance",
-        "luxury",
-        "magazine",
-        "proof",
-        "property",
-        "rail",
-        "seo",
-        "storytelling",
-        "tool",
-        "trust"
-      ]
-    },
-    "render_direction": "studio-split",
-    "render_direction_name": "Studio Split",
-    "page_blueprint": "campaign-mosaic",
-    "page_blueprint_name": "Campaign Mosaic",
+  "import_analysis": {
     "title": "Générateur de Contrats de Collaboration Artistique",
-    "tagline": "Votre Projet en Quelques Clics",
     "description": "Créez des contrats clairs et équitables pour les collaborations entre artistes, musiciens, écrivains, etc.",
-    "feature_prefix": "Bloc",
-    "action": "Générer le document",
-    "cta_primary": "Générer le Contrat",
-    "cta_secondary": "Consulter la FAQ",
-    "inputs": [
-      {
-        "id": "name",
-        "label": "Nom ou entreprise",
-        "type": "text",
-        "placeholder": "Studio Horizon",
-        "weight": 1.0
-      },
-      {
-        "id": "goal",
-        "label": "Objectif du document",
-        "type": "text",
-        "placeholder": "confirmation de demande",
-        "weight": 1.0
-      },
-      {
-        "id": "details",
-        "label": "Détails utiles",
-        "type": "text",
-        "placeholder": "date, montant, référence",
-        "weight": 1.0
-      }
+    "summary": "Créez des contrats clairs et équitables pour les collaborations entre artistes, musiciens, écrivains, etc.",
+    "notes": "Growth module republish of an updated local artifact.",
+    "archetype": "generator",
+    "language": "fr",
+    "country": "FR",
+    "market": "Growth republish",
+    "characteristics": [
+      "imported static site",
+      "ready file deploy",
+      "generator"
     ],
-    "hero_metrics": [
-      {
-        "value": "Studio Split",
-        "label": "Cadence"
-      },
-      {
-        "value": "3",
-        "label": "Entrées"
-      },
-      {
-        "value": "Brouillon généré",
-        "label": "Sortie"
-      }
-    ],
-    "trust_labels": [
-      "Studio Split",
-      "Générer le Contrat",
-      "Brouillon généré",
-      "Utilitaire immédiat",
-      "Structure SEO claire"
-    ],
-    "result_label": "Brouillon généré",
-    "result_unit": "",
-    "runtime_mode": "document_generator",
-    "page_variant": "classic",
-    "faq_topic": "Générateur de Contrats de Collaboration Artistique",
-    "faq_entries": [
-      {
-        "question": "Pourquoi utiliser cet outil pour Générateur de Contrats de Collaboration Artistique ?",
-        "answer": "Il aide à cadrer le besoin rapidement et à orienter vers une prochaine action claire sur le marché France."
-      },
-      {
-        "question": "Le résultat est-il immédiat ?",
-        "answer": "Oui. L'interface est pensée pour une réponse rapide, lisible et exploitable dès la première interaction."
-      },
-      {
-        "question": "Cette page est-elle adaptée au SEO ?",
-        "answer": "Oui. La structure mélange utilité, clarté éditoriale et signaux de confiance sans surcharger l'expérience."
-      }
-    ],
-    "seo_paragraphs": [
-      "Cette page capte une intention forte autour de Générateur de Contrats de Collaboration Artistique et la transforme en action utile pour un public situé sur France.",
-      "Le format hero-first accélère la compréhension, réduit les frictions et améliore la lisibilité sur mobile comme sur desktop.",
-      "Le socle reste volontairement simple pour faciliter les tests, la QA continue et les variations SEO."
-    ],
-    "document_html": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Générateur de Contrats de Collaboration Artistique | Votre Projet en Quelques Clics</title>\n    <meta name=\"description\" content=\"Créez des contrats clairs et équitables pour les collaborations entre artistes, musiciens, écrivains, etc.\">\n    <style>\n        :root {\n            --sand-light: #f5f5f5;\n            --sand-medium: #e0e0e0;\n            --sand-dark: #b0b0b0;\n            --glass-bg: rgba(255, 255, 255, 0.4);\n            --glass-border: rgba(255, 255, 255, 0.2);\n            --text-color: #333;\n            --accent-color: #7a869a; /* Softer, professional blue-grey */\n            --font-display: 'Georgia', serif;\n            --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n        }\n\n        body {\n            font-family: var(--font-body);\n            color: var(--text-color);\n            line-height: 1.6;\n            margin: 0;\n            padding: 0;\n            background-color: var(--sand-light);\n            display: flex;\n            flex-direction: column;\n            align-items: center;\n            overflow-x: hidden;\n        }\n\n        .container {\n            max-width: 960px;\n            margin: 0 auto;\n            padding: 20px;\n            width: 100%;\n        }\n\n        header {\n            width: 100%;\n            background-color: var(--sand-medium);\n            padding: 40px 0;\n            text-align: center;\n            border-bottom: 1px solid var(--sand-dark);\n            box-shadow: 0 2px 5px rgba(0,0,0,0.05);\n        }\n\n        header h1 {\n            font-family: var(--font-display);\n            font-size: 3.5em;\n            color: var(--accent-color);\n            margin-bottom: 10px;\n            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);\n        }\n\n        header p {\n            font-size: 1.2em;\n            color: var(--text-color);\n            max-width: 700px;\n            margin: 0 auto;\n        }\n\n        .editorial-rail {\n            display: flex;\n            flex-direction: column;\n            gap: 40px;\n            padding: 40px 0;\n        }\n\n        .card {\n            background: var(--glass-bg);\n            border: 1px solid var(--glass-border);\n            border-radius: 12px;\n            padding: 30px;\n            backdrop-filter: blur(10px);\n            box-shadow: 0 4px 6px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.02);\n            position: relative;\n            overflow: hidden;\n        }\n\n        .card::before {\n            content: '';\n            position: absolute;\n            top: -50%;\n            left: -50%;\n            width: 200%;\n            height: 200%;\n            background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);\n            opacity: 0.3;\n            pointer-events: none;\n            transition: opacity 0.3s ease;\n        }\n\n        .card:hover::before {\n            opacity: 0.5;\n        }\n\n        h2 {\n            font-family: var(--font-display);\n            font-size: 2em;\n            color: var(--accent-color);\n            margin-top: 0;\n            margin-bottom: 20px;\n        }\n\n        form {\n            display: grid;\n            gap: 15px;\n        }\n\n        label {\n            font-weight: bold;\n            display: block;\n            margin-bottom: 5px;\n            color: var(--text-color);\n        }\n\n        input[type=\"text\"],\n        input[type=\"number\"],\n        textarea,\n        select {\n            width: calc(100% - 20px);\n            padding: 12px;\n            border: 1px solid var(--sand-dark);\n            border-radius: 8px;\n            background-color: var(--sand-light);\n            font-family: var(--font-body);\n            font-size: 1em;\n            transition: border-color 0.3s ease, box-shadow 0.3s ease;\n        }\n\n        input[type=\"text\"]:focus,\n        input[type=\"number\"]:focus,\n        textarea:focus,\n        select:focus {\n            border-color: var(--accent-color);\n            box-shadow: 0 0 0 3px rgba(122, 134, 154, 0.2);\n            outline: none;\n        }\n\n        textarea {\n            min-height: 100px;\n            resize: vertical;\n        }\n\n        button {\n            background-color: var(--accent-color);\n            color: white;\n            padding: 15px 25px;\n            border: none;\n            border-radius: 8px;\n            font-size: 1.1em;\n            cursor: pointer;\n            transition: background-color 0.3s ease, transform 0.2s ease;\n            font-weight: bold;\n        }\n\n        button:hover {\n            background-color: #6a768c;\n            transform: translateY(-2px);\n        }\n\n        .result-section {\n            margin-top: 30px;\n            background: var(--glass-bg);\n            border: 1px solid var(--glass-border);\n            border-radius: 12px;\n            padding: 30px;\n            backdrop-filter: blur(10px);\n            box-shadow: 0 4px 6px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.02);\n        }\n\n        .result-section h3 {\n            font-family: var(--font-display);\n            font-size: 1.8em;\n            color: var(--accent-color);\n            margin-bottom: 15px;\n        }\n\n        .result-contract p {\n            background-color: var(--sand-medium);\n            padding: 15px;\n            border-radius: 8px;\n            border: 1px solid var(--sand-dark);\n            white-space: pre-wrap;\n            word-wrap: break-word;\n            font-size: 0.95em;\n            color: var(--text-color);\n        }\n\n        .cta-buttons {\n            display: flex;\n            gap: 15px;\n            margin-top: 25px;\n            flex-wrap: wrap;\n        }\n\n        .cta-buttons button {\n            flex-grow: 1;\n        }\n\n        .features-grid {\n            display: grid;\n            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));\n            gap: 25px;\n            margin-top: 20px;\n        }\n\n        .feature-item {\n            background: var(--glass-bg);\n            border: 1px solid var(--glass-border);\n            border-radius: 12px;\n            padding: 25px;\n            backdrop-filter: blur(8px);\n            box-shadow: 0 2px 4px rgba(0,0,0,0.03);\n            text-align: center;\n        }\n\n        .feature-item h3 {\n            font-family: var(--font-display);\n            color: var(--accent-color);\n            font-size: 1.4em;\n            margin-top: 10px;\n            margin-bottom: 15px;\n        }\n\n        .feature-item p {\n            font-size: 0.95em;\n            color: var(--text-color);\n        }\n\n        .separator {\n            width: 100%;\n            height: 1px;\n            background: linear-gradient(to right, transparent, var(--sand-dark), transparent);\n            margin: 60px 0;\n        }\n\n        footer {\n            width: 100%;\n            background-color: var(--sand-dark);\n            color: var(--sand-light);\n            padding: 40px 0;\n            text-align: center;\n            font-size: 0.9em;\n            margin-top: 60px;\n        }\n\n        footer a {\n            color: var(--sand-light);\n            text-decoration: none;\n            margin: 0 10px;\n            transition: color 0.3s ease;\n        }\n\n        footer a:hover {\n            color: var(--accent-color);\n        }\n\n        .seo-text {\n            max-width: 800px;\n            margin: 40px auto;\n            padding: 20px;\n            background-color: var(--sand-medium);\n            border-radius: 12px;\n            font-size: 0.9em;\n            color: var(--text-color);\n            line-height: 1.8;\n            text-align: justify;\n        }\n\n        .seo-text h3 {\n            font-family: var(--font-display);\n            color: var(--accent-color);\n            font-size: 1.6em;\n            margin-bottom: 20px;\n            text-align: center;\n        }\n\n        .seo-text ul {\n            list-style: disc;\n            padding-left: 20px;\n            margin-top: 15px;\n        }\n\n        .seo-text li {\n            margin-bottom: 8px;\n        }\n    </style>\n    <meta name=\"robots\" content=\"index, follow\">\n    <link rel=\"canonical\" href=\"https://generateur-de-contrats-de-collaboration-artistique-2.onrender.com\">\n    <meta property=\"og:title\" content=\"Générateur de Contrats de Collaboration Artistique\">\n    <meta property=\"og:description\" content=\"Créez des contrats clairs et équitables pour les collaborations entre artistes, musiciens, écrivains, etc.\">\n    <meta property=\"og:url\" content=\"https://generateur-de-contrats-de-collaboration-artistique-2.onrender.com\">\n    <meta property=\"og:type\" content=\"website\">\n    <script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebApplication\", \"name\": \"Générateur de Contrats de Collaboration Artistique\", \"description\": \"Créez des contrats clairs et équitables pour les collaborations entre artistes, musiciens, écrivains, etc.\", \"url\": \"https://generateur-de-contrats-de-collaboration-artistique-2.onrender.com\", \"applicationCategory\": \"UtilityApplication\", \"operatingSystem\": \"Web Browser\"}</script>\n</head>\n<body data-site-slug=\"generateur-de-contrats-de-collaboration-artistique-2\" data-runtime-mode=\"document_generator\">\n    <header>\n        <div class=\"container\">\n            <h1>Générateur de Contrats de Collaboration Artistique</h1>\n            <p>Créez des contrats clairs et équitables pour vos projets créatifs. Simplifiez les aspects juridiques et concentrez-vous sur votre art.</p>\n        </div>\n    </header>\n\n    <main class=\"container editorial-rail\">\n        <section class=\"card\">\n            <h2>Votre Projet en Quelques Clics</h2>\n            <p>Remplissez les informations ci-dessous pour générer instantanément un modèle de contrat adapté à votre collaboration artistique.</p>\n            <form id=\"tool-form\">\n                <label for=\"project-title\">Titre du Projet :</label>\n                <input type=\"text\" id=\"project-title\" name=\"project-title\" placeholder=\"Ex: Composition musicale pour film, Co-écriture de roman...\" required>\n\n                <label for=\"parties-involved\">Parties Impliquées (Noms ou Entités, séparés par une virgule) :</label>\n                <input type=\"text\" id=\"parties-involved\" name=\"parties-involved\" placeholder=\"Ex: Jean Dupont, Marie Curie Prod.\" required>\n\n                <label for=\"project-scope\">Description Détaillée du Projet et des Rôles :</label>\n                <textarea id=\"project-scope\" name=\"project-scope\" placeholder=\"Décrivez les contributions de chaque partie, les livrables attendus, les délais clés...\" required></textarea>\n\n                <label for=\"compensation-details\">Rémunération et Partage des Revenus :</label>\n                <textarea id=\"compensation-details\" name=\"compensation-details\" placeholder=\"Précisez le mode de rémunération (forfait, pourcentage, royalties), les échéances de paiement, etc.\"></textarea>\n\n                <label for=\"intellectual-property\">Propriété Intellectuelle (Attribution des droits) :</label>\n                <textarea id=\"intellectual-property\" name=\"intellectual-property\" placeholder=\"Indiquez qui détient quels droits sur l'œuvre finale, les licences d'utilisation, etc.\"></textarea>\n\n                <label for=\"dispute-resolution\">Clauses de Résolution des Litiges :</label>\n                <select id=\"dispute-resolution\" name=\"dispute-resolution\">\n                    <option value=\"médiation\">Médiation</option>\n                    <option value=\"arbitrage\">Arbitrage</option>\n                    <option value=\"tribunal\">Tribunal compétent (préciser la juridiction)</option>\n                    <option value=\"aucune\">À définir ultérieurement</option>\n                </select>\n\n                <label for=\"contract-date\">Date du Contrat :</label>\n                <input type=\"date\" id=\"contract-date\" name=\"contract-date\" value=\"\" required>\n\n                <button type=\"submit\" id=\"tool-submit\">Générer le Contrat</button>\n            </form>\n        </section>\n\n        <section id=\"tool-result\" class=\"result-section\" style=\"display: none;\">\n            <h3 id=\"result-headline\">Votre Contrat Pré-rempli</h3>\n            <div class=\"result-contract\"></div>\n            <div class=\"cta-buttons\">\n                <button data-affiliate-slot=\"download-pdf\">Télécharger en PDF</button>\n                <button data-affiliate-slot=\"edit-online\">Modifier en Ligne</button>\n                <button data-affiliate-slot=\"legal-review\">Conseil Juridique</button>\n            </div>\n        </section>\n\n        <div class=\"separator\"></div>\n\n        <section class=\"card\">\n            <h2>Pourquoi Choisir Notre Générateur ?</h2>\n            <div class=\"features-grid\">\n                <div class=\"feature-item\">\n                    <h3>Simplicité</h3>\n                    <p>Fini la complexité juridique. Nos modèles sont clairs, concis et faciles à comprendre pour tous les acteurs créatifs.</p>\n                </div>\n                <div class=\"feature-item\">\n                    <h3>Équité</h3>\n                    <p>Nous promouvons des collaborations justes. Chaque clause est pensée pour protéger les intérêts de toutes les parties.</p>\n                </div>\n                <div class=\"feature-item\">\n                    <h3>Adaptabilité</h3>\n                    <p>Que vous soyez musicien, écrivain, développeur de jeux ou artiste visuel, nos contrats s'adaptent à vos besoins spécifiques.</p>\n                </div>\n                <div class=\"feature-item\">\n                    <h3>Sécurité</h3>\n                    <p>Assurez une base solide pour vos projets. Des contrats bien établis réduisent les risques de litiges futurs.</p>\n                </div>\n            </div>\n        </section>\n\n        <div class=\"separator\"></div>\n\n        <section class=\"card\">\n            <h2>Ils nous font confiance</h2>\n            <p style=\"text-align: center; font-style: italic; color: var(--accent-color);\">\n                \"Ce générateur a transformé la manière dont je gère mes collaborations. Un gain de temps inestimable et une tranquillité d'esprit garantie.\" - Sophie, Artiste plasticienne\n            </p>\n            <p style=\"text-align: center; font-style: italic; color: var(--accent-color);\">\n                \"Enfin un outil qui parle aux créateurs ! Plus besoin de déchiffrer des textes légaux incompréhensibles.\" - Marc, Musicien indépendant\n            </p>\n        </section>\n    </main>\n\n    <div class=\"seo-text\">\n        <h3>Optimisez vos Collaborations Créatives avec nos Contrats Personnalisables</h3>\n        <p>Dans l'écosystème dynamique de la création artistique en France, la formalisation des partenariats est essentielle. Que vous soyez un artiste indépendant, un musicien compositeur, un scénariste en herbe, un développeur de jeux vidéo ou un photographe, un contrat de collaboration bien rédigé est votre meilleur allié. Notre générateur en ligne vous offre une solution rapide et fiable pour établir des accords clairs et juridiquement sains.</p>\n        <p><strong>Pourquoi utiliser un générateur de contrat artistique ?</strong></p>\n        <ul>\n            <li><strong>Clarté des Rôles :</strong> Définissez précisément les responsabilités et les attentes de chaque partie.</li>\n            <li><strong>Protection de la Propriété Intellectuelle :</strong> Assurez la bonne attribution des droits d'auteur et des licences d'exploitation pour vos œuvres (musique, texte, images, code).</li>\n            <li><strong>Gestion des Rémunérations :</strong> Cadrez les modalités financières, qu'il s'agisse de droits d'auteur, de pourcentages sur les ventes, de rétributions forfaitaires ou de royalties.</li>\n            <li><strong>Prévention des Litiges :</strong> Un contrat solide est le meilleur moyen d'éviter les malentendus et les conflits coûteux. Nos clauses de résolution des litiges vous guident vers une entente mutuelle.</li>\n            <li><strong>Gain de Temps et d'Argent :</strong> Évitez les frais d'avocats pour des contrats standards grâce à nos modèles pré-remplis et personnalisables.</li>\n        </ul>\n        <p>Notre plateforme est conçue pour les professionnels de la culture en France, respectant les spécificités du droit français. Simplifiez la création de vos documents légaux pour artistes, musiciens, écrivains et plus encore. Obtenez un modèle de contrat de prestation artistique, de cession de droits, ou de partenariat créatif adapté à votre projet. Utilisez notre outil pour un contrat de collaboration musicale, un accord de co-écriture, un contrat pour influenceurs, ou tout autre besoin en formalisation de projet créatif.</p>\n        <p><strong>Commencez dès aujourd'hui à sécuriser vos collaborations et à propulser vos projets artistiques avec confiance !</strong></p>\n    </div>\n\n    <footer>\n        <div class=\"container\">\n            <p>&copy; 2023 Générateur de Contrats Artistiques. Tous droits réservés.</p>\n            <nav>\n                <a href=\"#\">Conditions Générales</a> |\n                <a href=\"#\">Politique de Confidentialité</a> |\n                <a href=\"#\">Contact</a>\n            </nav>\n        </div>\n    </footer>\n\n    <script>\n        document.addEventListener('DOMContentLoaded', () => {\n            const form = document.getElementById('tool-form');\n            const submitButton = document.getElementById('tool-submit');\n            const resultSection = document.getElementById('tool-result');\n            const resultContractDiv = resultSection.querySelector('.result-contract');\n            const contractDateInput = document.getElementById('contract-date');\n\n            // Set today's date as default\n            const today = new Date();\n            const year = today.getFullYear();\n            const month = String(today.getMonth() + 1).padStart(2, '0');\n            const day = String(today.getDate()).padStart(2, '0');\n            contractDateInput.value = `${year}-${month}-${day}`;\n\n            form.addEventListener('submit', (event) => {\n                event.preventDefault();\n\n                const projectTitle = document.getElementById('project-title').value.trim();\n                const partiesInvolved = document.getElementById('parties-involved').value.split(',').map(p => p.trim()).filter(p => p);\n                const projectScope = document.getElementById('project-scope').value.trim();\n                const compensationDetails = document.getElementById('compensation-details').value.trim();\n                const intellectualProperty = document.getElementById('intellectual-property').value.trim();\n                const disputeResolution = document.getElementById('dispute-resolution').value;\n                const contractDate = document.getElementById('contract-date').value;\n\n                if (!projectTitle || partiesInvolved.length === 0 || !projectScope || !contractDate) {\n                    alert(\"Veuillez remplir tous les champs obligatoires marqués.\");\n                    return;\n                }\n\n                let partiesList = partiesInvolved.map(p => `- ${p}`).join('\\n');\n\n                let contractText = `\nCONTRAT DE COLLABORATION ARTISTIQUE\n\nEntre les soussignés :\n${partiesList}\n(Ci-après collectivement désignés les \"Parties\" et individuellement la \"Partie\")\n\nDate du Contrat : Le ${new Date(contractDate).toLocaleDateString('fr-FR')}\n\nArticle 1 - Objet du Contrat et Titre du Projet\nLe présent contrat a pour objet d'encadrer la collaboration entre les Parties pour le projet intitulé : \"${projectTitle}\".\n\nArticle 2 - Description et Portée du Projet\nLe projet consiste en :\n${projectScope}\n\nArticle 3 - Rémunération et Partage des Revenus\nLes modalités de rémunération et/ou de partage des revenus sont les suivantes :\n${compensationDetails || 'À définir par avenant si le projet évolue vers une monétisation.'}\n\nArticle 4 - Propriété Intellectuelle\nLa propriété intellectuelle et l'attribution des droits relatifs à l'œuvre résultant de cette collaboration sont définies comme suit :\n${intellectualProperty || 'Les Parties conviennent de détenir conjointement les droits sur les éléments issus de leur collaboration, sauf accord contraire écrit. Toute exploitation commerciale nécessitera l\\'accord de toutes les Parties.'}\n\nArticle 5 - Résolution des Litiges\nEn cas de désaccord ou de litige relatif à l'interprétation ou à l'exécution du présent contrat, les Parties s'engagent à privilégier une solution amiable. Si un accord n'est pas trouvé, la résolution des litiges s'effectuera par : ${disputeResolution === 'médiation' ? 'Médiation' : disputeResolution === 'arbitrage' ? 'Arbitrage' : disputeResolution === 'tribunal' ? 'Sera porté devant le tribunal compétent de la juridiction applicable.' : 'À définir ultérieurement.'}.\n\nArticle 6 - Confidentialité\nLes Parties s'engagent à maintenir la confidentialité des informations échangées dans le cadre de ce projet.\n\nArticle 7 - Durée du Contrat\nLe présent contrat prend effet à la date de sa signature et se poursuivra jusqu'à l'achèvement du projet ou selon les termes spécifiques convenus entre les Parties.\n\nFait à __________, le ${new Date(contractDate).toLocaleDateString('fr-FR')} en deux exemplaires originaux.\n\n_________________________                 _________________________\n[Nom/Signature Partie 1]                  [Nom/Signature Partie 2]\n(Si plus de parties, ajouter des lignes)\n`;\n\n                resultContractDiv.innerHTML = `<p>${contractText}</p>`;\n                resultSection.style.display = 'block';\n                resultSection.scrollIntoView({ behavior: 'smooth' });\n            });\n        });\n    </script>\n<div id=\"qa-smoke-result\" hidden></div>\n<script id=\"farmbuilder-affiliate-helper\">\n(function () {\n  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};\n  document.addEventListener(\"click\", function (event) {\n    const target = event.target.closest(\"[data-affiliate-slot]\");\n    if (!target) return;\n    const slot = target.getAttribute(\"data-affiliate-slot\");\n    const href = window.__UTILITY_AFFILIATE_MAP[slot];\n    if (!href) return;\n    if (target.tagName && target.tagName.toLowerCase() === \"a\") {\n      target.setAttribute(\"href\", href);\n      target.setAttribute(\"rel\", \"nofollow sponsored noopener noreferrer\");\n      return;\n    }\n    event.preventDefault();\n    window.open(href, \"_blank\", \"noopener\");\n  }, true);\n})();\n</script>\n<script id=\"farmbuilder-functional-qa\">\n(function () {\n  function marker() {\n    let node = document.getElementById(\"qa-smoke-result\");\n    if (node) return node;\n    node = document.createElement(\"div\");\n    node.id = \"qa-smoke-result\";\n    node.hidden = true;\n    document.body.appendChild(node);\n    return node;\n  }\n\n  function normalize(text) {\n    return String(text || \"\").replace(/\\s+/g, \" \").trim();\n  }\n\n  function findForm() {\n    return document.getElementById(\"tool-form\") || document.querySelector(\"form\");\n  }\n\n  function findResult() {\n    return (\n      document.getElementById(\"tool-result\") ||\n      document.querySelector(\"[data-result]\") ||\n      document.querySelector(\".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis\")\n    );\n  }\n\n  function resultSignature(node) {\n    if (!node) return \"\";\n    const text = normalize(node.textContent);\n    const html = normalize(node.innerHTML).slice(0, 600);\n    return `${text}||${html}`;\n  }\n\n  function resultHeadline(node) {\n    if (!node) return \"\";\n    const heading = node.querySelector(\"h1, h2, h3, strong, b\");\n    return normalize(heading ? heading.textContent : \"\");\n  }\n\n  function sampleText(field) {\n    const key = `${field.id || \"\"} ${field.name || \"\"} ${field.placeholder || \"\"}`.toLowerCase();\n    if (/email/.test(key)) return \"bonjour@example.com\";\n    if (/url|site|website|lien/.test(key)) return \"https://example.com/offre-solaire\";\n    if (/phone|tel|mobile/.test(key)) return \"0612345678\";\n    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return \"Paris\";\n    if (/orientation/.test(key)) return \"sud\";\n    if (/keyword|theme|topic|sujet|subject/.test(key)) return \"energie solaire domestique\";\n    if (/titre|title/.test(key)) return \"Simulateur solaire maison\";\n    if (/nom|name|project/.test(key)) return \"Projet Horizon\";\n    if (/description|notes|content|message/.test(key)) return \"Maison individuelle exposee sud avec toiture exploitable.\";\n    return field.placeholder || \"France\";\n  }\n\n  function sampleNumber(field) {\n    const key = `${field.id || \"\"} ${field.name || \"\"}`.toLowerCase();\n    if (/inclinaison|angle|slope/.test(key)) return \"30\";\n    if (/surface|size|m2|sqm/.test(key)) return \"28\";\n    if (/annee|year/.test(key)) return \"2024\";\n    if (/prix|price|budget|cost|amount|montant/.test(key)) return \"12000\";\n    const min = Number(field.min || \"\");\n    const max = Number(field.max || \"\");\n    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {\n      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));\n    }\n    if (Number.isFinite(min)) return String(Math.max(min, 12));\n    if (Number.isFinite(max)) return String(Math.min(max, 12));\n    return field.value || \"12\";\n  }\n\n  function applySample(field) {\n    const tag = (field.tagName || \"\").toLowerCase();\n    const type = (field.type || \"\").toLowerCase();\n    if (field.disabled) return;\n    if (tag === \"select\") {\n      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];\n      if (option) field.value = option.value;\n      return;\n    }\n    if (type === \"checkbox\") {\n      field.checked = true;\n      return;\n    }\n    if (type === \"radio\") {\n      field.checked = true;\n      return;\n    }\n    if (type === \"date\") {\n      field.value = \"2026-03-01\";\n      return;\n    }\n    if (type === \"email\") {\n      field.value = \"bonjour@example.com\";\n      return;\n    }\n    if (type === \"url\") {\n      field.value = \"https://example.com/offre-solaire\";\n      return;\n    }\n    if (type === \"tel\") {\n      field.value = \"0612345678\";\n      return;\n    }\n    if (type === \"color\") {\n      field.value = \"#2f855a\";\n      return;\n    }\n    if (type === \"number\" || type === \"range\") {\n      field.value = sampleNumber(field);\n      return;\n    }\n    field.value = sampleText(field);\n  }\n\n  function stamp(status, detail, headline, primary) {\n    const node = marker();\n    node.dataset.status = status;\n    node.dataset.mode = \"native-form\";\n    node.dataset.detail = detail || \"\";\n    node.dataset.headline = headline || \"\";\n    node.dataset.primary = primary || \"\";\n    node.dataset.viewport = window.innerWidth <= 640 ? \"mobile\" : \"desktop\";\n  }\n\n  function inspectResult(before, attemptsLeft) {\n    const result = findResult();\n    if (!result) {\n      stamp(\"fail\", \"La zone de resultat est introuvable.\", \"\");\n      return;\n    }\n    const after = resultSignature(result);\n    const text = normalize(result.textContent);\n    if (after && after !== before && text.length >= 24) {\n      const primary = result.querySelector(\"a[href], button[data-href], [data-primary-url]\") || document.querySelector(\"#tool-result a[href]\");\n      stamp(\"pass\", \"Le formulaire natif a mis a jour la zone de resultat.\", resultHeadline(result), primary ? (primary.getAttribute(\"href\") || primary.getAttribute(\"data-primary-url\") || \"\") : \"\");\n      return;\n    }\n    if (attemptsLeft > 0) {\n      window.setTimeout(function () {\n        inspectResult(before, attemptsLeft - 1);\n      }, 250);\n      return;\n    }\n    stamp(\"fail\", \"La zone de resultat n'a pas renvoye de contenu exploitable.\", resultHeadline(result));\n  }\n\n  function runSmoke() {\n    const params = new URLSearchParams(window.location.search);\n    if (params.get(\"__qa\") !== \"functional\") return;\n    const form = findForm();\n    if (!form) {\n      stamp(\"fail\", \"Le formulaire principal est introuvable.\", \"\");\n      return;\n    }\n    const result = findResult();\n    const before = resultSignature(result);\n    form.querySelectorAll(\"input, select, textarea\").forEach(applySample);\n    const blocker = function (event) {\n      event.preventDefault();\n    };\n    form.addEventListener(\"submit\", blocker, { capture: true, once: true });\n    form.dispatchEvent(new Event(\"submit\", { bubbles: true, cancelable: true }));\n    inspectResult(before, 6);\n  }\n\n  if (document.readyState === \"loading\") {\n    document.addEventListener(\"DOMContentLoaded\", function () {\n      window.setTimeout(runSmoke, 60);\n    }, { once: true });\n  } else {\n    window.setTimeout(runSmoke, 60);\n  }\n})();\n</script>\n</body>\n</html>",
-    "generation_mode": "direct_html"
-  }
+    "suggested_slug": "generateur-de-contrats-de-collaboration-artistique-2"
+  },
+  "source_path": "/var/lib/utility-site-studio/data/growth-republish/growth-1778636287649/generateur-de-contrats-de-collaboration-artistique-2",
+  "deploy_root": "/var/lib/utility-site-studio/data/growth-republish/growth-1778636287649/generateur-de-contrats-de-collaboration-artistique-2"
 }
